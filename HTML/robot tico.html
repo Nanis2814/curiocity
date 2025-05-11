@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora - Curiocity</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Satoshi&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Curiocity</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">MENÚ&nbsp;</a></li>
+        <li><a href="explora.html">EXPLORA&nbsp;</a></li>
+        <li><a href="#retos">HISTORIAS&nbsp;</a></li>
+        <li><a href="#mi-espacio">ANIMALES&nbsp;</a></li>
+        <li><a href="#accesibilidad">MI CUENTA&nbsp;</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+<section id="tarjetas" class="tarjetas-categorias">
+  <h1 class="tittle">"El Robot Tico y la Ciudad del Futuro"</h1>
+	
+        <p class="texto"> Tico era un robot simpático que vivía en una ciudad del futuro. Tenía ruedas en los pies, luces en los ojos y una tablet en la panza. Su trabajo era ayudar a los niños en la escuela.</p>
+
+		<p>Cada mañana, Tico los saludaba con una gran sonrisa digital:
+—¡Buenos días! Hoy aprenderemos con realidad virtual —decía mientras les 
+	ponía unas gafas especiales para viajar al fondo del mar sin mojarse.</p>
+
+<p class="texto">En la ciudad de Tico, los autos volaban, las casas se limpiaban solas y los árboles daban energía solar.
+—¡La tecnología está para ayudarnos! —decía la maestra—. Pero también debemos usarla con cuidado.</p>
+
+<p class="texto">Una niña llamada Lía le preguntó a Tico:
+	—¿Cómo será el futuro dentro de muchos años?</p>
+
+<p class="texto">Tico respondió:
+—Si cuidamos el planeta y usamos la tecnología para hacer el bien, el futuro será brillante. ¡Podremos curar enfermedades, viajar al espacio y aprender cosas nuevas todos los días!</p>
+
+<p class="texto">Los niños aplaudieron. Sabían que con imaginación, ciencia y trabajo en equipo, ellos podían construir un futuro mejor.</p>	
+</section> 
+  </main>
+  <footer>
+    <p>&copy; 2025 Curiocity. Hecho por el equipo Dany, Marilu, Judith y Jessica </p>
+  </footer>
+<script>
+  function leerTexto() {
+    const texto = Array.from(document.querySelectorAll('#tarjetas p'))
+      .map(p => p.textContent)
+      .join(' ');
+
+    const voz = new SpeechSynthesisUtterance(texto);
+    voz.lang = 'es-MX';
+    voz.rate = 1;
+    window.speechSynthesis.speak(voz);
+  }
+</script>
+</body>
+</html>
