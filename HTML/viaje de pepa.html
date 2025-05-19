@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora - Curiocity</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Satoshi&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Curiocity</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">INICIO&nbsp;</a></li>
+        <li><a href="explora.html">EXPLORA&nbsp;</a></li>
+        <li><a href="historias.html">HISTORIAS&nbsp;</a></li>
+        <li><a href="animales.html">ANIMALES&nbsp;</a></li>
+        <li><a href="mi cuenta.html">MI CUENTA&nbsp;</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+<section id="tarjetas" class="tarjetas-categorias">
+  <h1>El Viaje de Pepa, la Célula Aventurera"</h1>
+        <p> Pepa es una célula muy curiosa. Vive en el cuerpo de un niño y le encanta aprender cosas nuevas. Un día, decidió hacer un viaje para conocer a sus amigos: las otras partes del cuerpo.</p>
+
+	<p>Primero, visitó al corazón, que late todo el tiempo para enviar sangre a todas partes.</p>
+	<p> —¡Hola, Pepa! —dijo el corazón—.</p>
+	<p>Yo trabajo sin parar para que todo el cuerpo tenga oxígeno y energía.</p>
+	<p>Después, Pepa fue a ver a los pulmones.</p>
+	<p>—Nosotros ayudamos a respirar —le contaron—. Tomamos el aire y se lo damos a la sangre para que tú puedas trabajar bien.</p>
+	<p>Más tarde, visitó al estómago.</p>
+	<p>—¡Aquí llega la comida! —le dijo—. Yo la descompongo en pedacitos pequeños para que tú y tus amigas tengan energía.</p>
+
+	<p>Pepa se dio cuenta de que todos trabajaban en equipo, como una gran familia.</p>
+	<p>—¡Qué maravilloso es el cuerpo humano! —pensó—. Cada parte tiene una tarea importante.</p>
+	<p>Y así, Pepa siguió su aventura feliz, sabiendo que incluso siendo una célula pequeñita, ¡era muy valiosa!</p>
+	<audio controls>
+            <source src="../AUDIOS/el viaje de pepa.mp4" type="audio/mp3">
+            Tu navegador no soporta el audio.
+        </audio>
+</section> 
+  </main>
+  <footer>
+    <p>&copy; 2025 Curiocity. Hecho por el equipo Dany, Marilu, Judith y Jessica </p>
+  </footer>
+<script>
+  function leerTexto() {
+    const texto = Array.from(document.querySelectorAll('#tarjetas p'))
+      .map(p => p.textContent)
+      .join(' ');
+
+    const voz = new SpeechSynthesisUtterance(texto);
+    voz.lang = 'es-MX';
+    voz.rate = 1;
+    window.speechSynthesis.speak(voz);
+  }
+</script>
+</body>
+</html>

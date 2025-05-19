@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora - Curiocity</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Satoshi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Curiocity</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">INICIO&nbsp;</a></li>
+        <li><a href="explora.html">EXPLORA&nbsp;</a></li>
+        <li><a href="historias.html">HISTORIAS&nbsp;</a></li>
+        <li><a href="animales.html">ANIMALES&nbsp;</a></li>
+        <li><a href="mi cuenta.html">MI CUENTA&nbsp;</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tarjetas" class="tarjetas-categorias">
+      <h1>"Un Paseo por el Espacio con Luna y Sol"</h1>
+      
+      <!-- Todo el contenido envuelto en un div con ID para lectura -->
+      <div id="contenido-lectura">
+        <p>Luna y Sol eran dos grandes amigos. Todos los días, se turnaban para iluminar la Tierra.</p>
+        <p>—Cuando yo salgo, la gente juega, trabaja y va a la escuela —decía Sol con orgullo—. ¡Yo traigo el día!</p>
+        <p>—Y cuando yo aparezco, las estrellas brillan y todos descansan —respondía Luna—. ¡Yo cuido la noche!</p>
+        <p>Un día, invitaron a su amiga Tierra a dar un paseo por el espacio.</p>
+        <p>—¡Miren qué redonda soy! —dijo Tierra girando—. ¡Tardo un día entero en dar una vuelta!</p>
+        <p>Mientras giraban, vieron a otros planetas.
+        —¡Ahí está Marte, el planeta rojo! —gritó Luna.
+        —Y allá está Júpiter, el más grande —añadió Sol.</p>
+        <p>Tierra sonrió.
+        —Vivo en una familia de planetas que gira alrededor del Sol. ¡Eso se llama el sistema solar!</p>
+        <p>Desde el espacio, Luna, Sol y Tierra miraban las nubes, los océanos y los bosques.</p>
+        <p>—La Tierra es muy especial —dijo Sol—. ¡Es el único planeta con vida!</p>
+        <p>Y así, los tres amigos siguieron su paseo cósmico, sabiendo lo importante que es cuidar nuestro hermoso hogar: la Tierra.</p>
+		<audio controls>
+            <source src="../AUDIOS/paseo por el espacio.mp4" type="audio/mp3">
+            Tu navegador no soporta el audio.
+        </audio>
+      </div>
+    </section> 
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Curiocity. Hecho por el equipo Dany, Marilu, Judith y Jessica</p>
+  </footer>
+<script>
+  function leerTexto() {
+    const texto = Array.from(document.querySelectorAll('#tarjetas p'))
+      .map(p => p.textContent)
+      .join(' ');
+
+    const voz = new SpeechSynthesisUtterance(texto);
+    voz.lang = 'es-MX';
+    voz.rate = 1;
+    window.speechSynthesis.speak(voz);
+  }
+</script>
+</body>
+</html>
+
