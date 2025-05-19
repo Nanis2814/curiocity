@@ -1,0 +1,294 @@
+/* Estilos globales */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 2rem;
+}
+
+.subtitulo {
+  color: #1831AF;
+}
+
+header {
+  background-color: #FF5733;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 4rem;
+  text-align: left;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  padding: 0 1rem;
+  border-right: 1px solid white;
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.hero {
+  background: url("../IMAGENES/fondo.jpg") no-repeat center center;
+  background-size: cover;
+  color: #1831AF;
+  text-align: left;
+  padding: 4rem 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h2,
+.hero p {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #1831AF;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para la grilla de tarjetas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #1831AF;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  background-color: #A6B5FF;
+}
+
+footer {
+  background-color: #1831AF;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in forwards;
+  opacity: 0;
+}
+
+.bounce {
+  animation: bounceIn 0.8s ease;
+  color: #1831AF;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* --- TARJETAS PERSONALIZADAS --- */
+.card-deck.personalizado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: auto auto;         /* 2 filas automáticas */
+  gap: 24px;                              /* espacio entre tarjetas */
+  padding: 2rem;
+  justify-items: left;  /* centra horizontalmente las tarjetas */
+}
+
+.curiocard {
+  background-color: #1831AF;
+  border: 2px solid #1831AF;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  max-width: 280px;
+  width: 100%;
+}
+
+.curiocard:hover {
+  transform: scale(1.05);
+}
+
+.curiocard img {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  height: 120px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.curiocard .card-title {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.curiocard .card-text {
+  font-size: 0.82rem;
+  color: white;
+}
+
+.card-img-top {
+  padding: 1rem;
+}
+
+/* --- SECCIONES DE ANIMALES --- */
+.seccion-animal {
+  background-color: #1831AF; /* Azul de tu paleta */
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-animal img {
+  display: block;
+  margin: 1rem auto 0 auto; /* arriba 1rem, centrado automático a los lados */
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+.imagenes_box {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* --- RESPONSIVE: para pantallas pequeñas --- */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem; /* Reducir tamaño del título */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    padding: 0.5rem 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-deck.personalizado {
+    grid-template-columns: 1fr;
+  }
+
+  .curiocard {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+
+  .imagenes_box {
+    width: 100%; /* Imágenes más grandes en pantallas pequeñas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem; /* Ajustar el padding en móviles */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Hacer los botones más pequeños en móviles */
+    font-size: 0.9rem;
+  }
+}
+
+
