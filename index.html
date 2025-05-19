@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curiocity - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Satoshi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Curiocity</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="HTML/explora.html">EXPLORA</a></li>
+		 <li><a href="HTML/historias.html">HISTORIAS</a></li>
+        <li><a href="HTML/animales.html">ANIMALES</a></li>
+        <li><a href="HTML/mi cuenta.html">MI CUENTA</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <section class="hero">
+  <h2>Explora el universo de la ciencia a tu ritmo</h2>
+  <p>Descubre misiones, retos y aventuras científicas pensadas para ti.</p>
+  <a class="btn" href="HTML/explora.html">¡Comenzar!</a>
+</section>
+  <footer>
+    <p>&copy; 2025 Curiocity. Hecho en la clase de interfaces </p>
+  </footer>
+
+  <script>
+    function speakText(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'es-MX';
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
